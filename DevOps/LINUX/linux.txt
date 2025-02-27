@@ -1,0 +1,161 @@
+Today Im gonna discuss about Linux operating system.
+Whats is OS - Its an interface between user & hardware components.
+As we know we have mutliple operating systems in to the market like Windows, MAC os & Linux.
+
+Linux is an open Source operating system(OS) is made up of kernel. (kernel its a central component of operating system or its a  is hart of Linux OS)
+Linux was introduced by Linux forvalds in 1991.
+He was a student. He actually invented this particular complete Linux OS during his studies.
+He created a new free OS kernel.
+
+Linux opearing system is completely different from other operating systems & also linux is one of the popular version of UNIX. [or Linux is a varient of UNIX or simply linux is a unix clone]
+Linux was designed considering unix compatibility. The functionality list is quite similar to that of UNIX.
+
+Distributions of UNIX:-
+
+HP-Unix
+IBM-Aix
+Sun-Solaris
+etc.. 
+These are paid Versions without pay we cann't use these version's in our PC's.
+
+Distributions of Linux:-
+
+Susi
+Fedora
+ubuntu
+debain
+redhat etc..
+
+
+Before Starting Linux Shell Script Programming you must know about the architecture of linux.
+
+● Hardware
+● Kernel
+● Shell
+● Application
+
+Now we can take an example:
+Assume i installed an application Git. If i ran some commands from the user and converts them into something which kernel canunderstand(i.e machine level lan).
+
+Kernel:-
+Kernel is nothing but the core part of an operating system which provides coordination between user and hardware.
+It manages resource of Linux O/S. Resources means facilities available in Linux. For eg. Facility to store data, print data on printer, memory, file management etc . Kernel decides who will use this resource, for how long and when.
+
+Shell:-
+Shell is a mediator which is going to translate the human level language to machine level language (binary) and vice versa.
+
+For Eg: When we enter commands through the keyboard it gathers input from you and executes programs based on that input. When a program finishes executing it displays that program's output.
+
+Hardware:-
+
+Hardware refers to the physical components of a computer. Any component of a computer that we can physically touch is referred to as computer hardware. These are the primary electronic devices used to build up the computer. Examples of hardware in a computer are the Processor, Memory Devices, Monitor, Printer, Keyboard, Mouse, and the Central Processing Unit. 
+
+Advantages of Linux:-
+
+1. Open Source
+One of the main advantages of Linux is that it is an open source operating system i.e. its source code is easily available for everyone. Anyone capable of coding can contribute, modify, enhance and distribute the code to anyone and for any purpose.
+
+2. Security
+Linux is more secure in comparison to other operating systems such as Windows.
+
+3. Free
+Certainly, the biggest advantage of the Linux system is that it is free to use. We can easily download it, and there is no need to buy the license for it. It is distributed under GNU GPL (General Public License). Comparatively, we have to pay a huge amount for the license of the other operating systems.
+
+4. Lightweight
+Linux is lightweight. The requirements for running Linux are much less than other operating systems. In Linux, the memory footprint and disk space are also lower. Generally, most of the Linux distributions required as little as 128MB of RAM around the same amount for disk space. 
+
+5. Stability
+Linux is more stable than other operating systems. Linux does not require to reboot the system to maintain performance levels. It rarely hangs up or slow down. It has big up-times.
+
+6. Performance
+Linux system provides high performance over different networks. It is capable of handling a large number of users simultaneously.
+
+7. Multitasking
+It is a multitasking operating system as it can run multiple tasks simultaneously without affecting the system speed.
+
+Dis Advantages:-
+
+1. Adaptation
+For people who are less expertise in computers it can be hard to understand Linux. Most users find it difficult to adopt to Linux due to the terminals used. Terminals are command line interface where you need to enter specific command in order to complete tasks
+
+2. Software Compatibility
+
+Popular applications which are made for Windows and Mac are not available for Linux. Many developers are not interested in making softwares for Linux due to its small market value. Some of such softwares are MS Office, iTunes and Photoshop. Even though there are alternatives to these softwares, they cannot match up to the original level.
+
+3. Not Suitable for Gaming
+
+Similar to sofwares, games too doesn't natively support Linux. Because Linux is not a platform which is not widely used, gaming developers are not much interested in Linux. So you cannot expect your favorite game to run on Linux. However, the number of games developed for Linux is on a rise in the recent years. Al though you can use third party softwares like Steam to download any gaming title, still the game will not run smoothly as it does on native operating system. 
+
+4. Hardware Compatibility
+
+Almost all the hardwares can be connected to a Linux operating system. But the problem comes with the drivers. The concept of drivers in Linux is very different from other operating system. The drivers here are inbuilt inside the Kernel. Since the drivers are already preinstalled, the newly connected hardware device may not have the proper drivers. This makes the connected hardware device to be incompatible.
+
+5. Technical Support
+
+Since Linux is an open source operating system it lacks on the side of technical support. The problem cannot be rectified unless you find a solution yourself. For each problem users need to look online ; possibly a community forum. This cannot guarantee to have the exact problem which you experience. Apart from these, it is also difficult to find someone expert in Linux. Otherwise, once you encounter a problem you will have to look for other Linux distributions.
+
+All configuration file are stored in under / directory or it called as root directory
+
+Home - If we can create any new user the data will be available on Home directory
+Eg cd /
+
+
+Basic Commands:---
+
+1.	To check the OS name:- #uname
+2.	To check the release of OS :- #uname –r
+3.	To check the present working user account:- #whoami, who am i, id   
+4.	To check the present working location:- #pwd
+5.	To list the contents of present working directory:-#ls
+6.	To list the properties:- #ls –l
+7.	To list the details of the files with time:- ls -lt
+8.	To list the reverse order time:- ls -ltr
+9.	To display file details with permissions:- ll
+10.	To check the inode numbers:- #ls -i 
+11.	To check the hidden objects:-  #ls –a
+12.	To list the files with all properties:- #ls –ali
+13.	To check the system date:- #date
+14.	To change the system date:- 
+#date –s “Thu jun 19 13:20:20  IST 2011”
+15.	To check the calendar :- #cal
+16.	To check the calendar of particular year :- #cal 2011
+17.	To check the calendar of specific month and year :-
+ #cal 2 2011
+18.	To perform calculations:- #gnome-calculator
+19.	To check the uptime :- #uptime
+20.	To check the last reboot :- #last reboot
+21.	To display who is online :- #w
+22.	To display the IP address of host :- #hostname -i
+23.	If you want to logout from the Server :- #exit
+24.	ifconfig :- to find the Ip address of server
+25.	id	:- present im login to the server user id
+26.	Exit - If you want to logout from server, we can use Exit command
+
+#cat   <option>  <filename>
+Options:-
+1.	> to create a file
+2.	< to view the content
+3.	>> to append the content
+Creating a file:-
+#cat   > linux
+---------------------
+----------------------
+Ctrl + d  ---for save and quit.
+To view the content of the file:-
+#cat  <   linux
+To append the content of already existing text:-
+#cat   >>  linux
+
+For creating a single directory or folder:-
+#mkdir   folder name
+For creating a multiple directories:-
+#mkdir     folder1    folder2
+For changing the directory:-
+#cd   directory name
+#cd   <path>
+1.	Absolute path:- complete path
+2.	Relative path: - used only when the file or directory is in the current directory.
+To change to the previous directory: -  #cd -
+To change one level back: -  #cd ..
+To change two levels back: -  #cd  ../..
+To move to the home directory: - #cd ~

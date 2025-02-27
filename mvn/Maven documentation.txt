@@ -1,0 +1,33 @@
+How to Install jdk in linux:
+
+wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz
+tar -xvf jdk-21_linux-x64_bin.tar.gz
+
+How to set environment variables for java:
+
+vi /etc/profile.d/java.sh
+export JAVA_HOME=/opt/java/jdk-21.0.6
+export PATH=${JAVA_HOME}/bin:${PATH}
+source /etc/profile.d/java.sh
+
+Java --version
+==================================================================================
+
+==================================================================================
+
+Please refer the below browser to set the env variables & installation of maven
+
+https://medium.com/@gauravshah97/how-to-install-maven-on-windows-39ff317e40cf
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+tar -xvf apache-maven-3.9.9-bin.tar.gz
+
+How to set environment variables for Maven:
+
+vi /etc/profile.d/maven.sh
+export M2_HOME=/opt/maven/apache-maven-3.9.9
+export PATH=${M2_HOME}/bin:${PATH}
+source /etc/profile.d/maven.sh
+
+mvn -version
+
+===================================================================================

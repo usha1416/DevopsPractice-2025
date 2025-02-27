@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="${pkg.title}" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">	
+	<bannerLeft>
+		<name>${pkg.title}</name>
+		<alt>${pkg.title}</alt>
+		<src>/images/logo-left.png</src>
+		<href>/index.html</href>
+	</bannerLeft>
+	<bannerRight>
+		<src>/images/logo-text.png</src>
+	</bannerRight>	
+	
+	<version position="right"/>
+	<publishDate position="right"/>
+	
+	<poweredBy>
+		<logo name="Powered by ${org.name}" href="${org.url}"	target="_blank" img="images/logo-powered.png"/>
+	</poweredBy>	
+
+	<skin>
+		<groupId>org.apache.maven.skins</groupId>
+		<artifactId>maven-fluido-skin</artifactId>
+		<version>1.4</version>
+	</skin>
+
+	<custom>
+		<fluidoSkin>
+			<topBarEnabled>true</topBarEnabled>
+			<sideBarEnabled>true</sideBarEnabled>
+			<sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+		</fluidoSkin>
+	</custom>
+
+	<body>        
+		<links>
+			<item name="${org.name} Web Page" href="${org.url}" />
+			<item name="OBSS Portal" href="http://obss.com.tr/portal" />
+		</links>
+		
+		<menu ref="modules" />
+		<menu ref="reports" inherit="bottom" />
+
+        <menu name="Project Applications">
+            <item name="Confluence" href="${app.confluence.baseUrl}/" />
+            <item name="JIRA" href="${app.jira.baseUrl}/browse/${pkg.code}" />
+            <item name="Stash" href="${app.stash.baseUrl}/projects/${pkg.code}/repos/${pkg.code}/browse" />
+            <item name="Bamboo" href="${app.bamboo.baseUrl}/${pkg.code}" />
+            <item name="FishEye" href="${app.fecru.baseUrl}/" />
+            <item name="Nexus" href="${app.jira.baseUrl}/" />
+            <item name="Sonar" href="${app.sonarqube.baseUrl}/" />
+        </menu>
+		
+		<breadcrumbs>
+			<item name="Accounts" href="/index.html"/>
+			<item name="OBSS" href="/index.html"/>
+			<item name="${project.name}" href="/index.html"/>
+		</breadcrumbs>
+	
+		<footer />
+	</body>
+</project>

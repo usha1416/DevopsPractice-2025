@@ -1,0 +1,12 @@
+Basic Commands:-
+
+/ - root folder
+~(tilt) - Home folder
+cd .. - go back 1 step
+cd ../../ go back to 2 steps
+cd - completely bck
+suso su - -- to switch sudo user(sudo user having root privatizations)
+pwd - present working directory
+mkdir name	- create a directory
+cd foldername - 
+touch filename or touch 2 3 4  5 6
