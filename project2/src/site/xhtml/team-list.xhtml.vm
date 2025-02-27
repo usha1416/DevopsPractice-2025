@@ -1,0 +1,65 @@
+<div>
+<h2>Project Team<a name="Project_Team"></a></h2>
+
+<p>
+	A successful project requires many people to play many roles. Some members write code or documentation, while others are valuable as testers, submitting patches and suggestions.
+</p>
+
+<div class="section">
+
+<h3>Team Members</h3>
+
+#if($project.developers.size() > 0)
+	<p>
+		The following is a list of project team members at the time of building this project.
+	</p>
+
+	<table border="0" class="table table-striped">
+	<tr class="a">
+	<th class="rol-avatar">Image</th>
+	<th class="rol-username">User Name</th>
+	<th class="rol-fullname">Full Name</th>
+	<th class="rol-name">Project Role</th>
+	<th class="rol-email">Email</th>
+	</tr>
+
+	#set ($idx = 0)
+	#set ($trClass = "a")
+	#foreach(${dev} in ${project.developers})
+		#if(($idx % 2) == 0)
+			#set($trClass = "a")
+		#else
+			#set($trClass = "b")
+		#end
+		
+		#if($dev.roles.size() > 0)
+			#set($roleName = $dev.roles.get(0))
+		#else
+			#set($roleName = "-")
+		#end
+		
+		#if($dev.url)
+			#set($roleFullname = "<a href='$dev.url' target='_blank' name='${dev.name}'>${dev.name}</a>")
+		#else
+			#set($roleFullname = ${dev.name})
+		#end
+		
+		
+		<tr class="${trClass}">
+			<td class="rol-avatar"><img src="https://id.obss.com.tr/avatar/${dev.id}?s=60" alt="${dev.name}" /></td>
+			<td class="rol-username"><a name="${dev.id}"></a>${dev.id}</td>
+			<td class="rol-fullname">${roleFullname}</td>
+			<td class="rol-name">${roleName}</td>
+			<td class="rol-email"><a class="externalLink" href="mailto:${dev.email}">${dev.email}</a></td>
+		</tr>
+		#set ($idx = $idx + 1)
+	#end
+	</table>
+#else
+	<p>
+		Currently, there are no members working on this project.
+	</p>
+#end
+</div>
+
+</div>

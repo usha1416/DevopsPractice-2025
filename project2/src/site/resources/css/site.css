@@ -1,0 +1,23 @@
+/* OBSS Custom Site */
+ 
+footer {
+	padding-bottom:12px;
+}
+
+ul.nav-list a.externalLink {
+	background:none;
+}
+
+.rol-avatar {
+	width:70px;
+}
+
+.rol-avatar img {
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	height: 60px;
+	width: 60px; 
+	border:1px solid #AAA;
+	box-shadow: 4px 4px 4px #DDDDDD;
+}
