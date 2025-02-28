@@ -1,0 +1,256 @@
+Windows normal installation:
+download file & install
+git
+git init
+git config --global user.name "usha1416"
+git config --global user.email "yusha1416@gmail.com"
+========================================================
+
+Linux:
+yum update
+yum install git(default 1.8 package will be installed)
+sudo yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum -y install git2u-all
+git
+which git - location - /usr/bin/git
+cd /opt
+mkdir Batch41
+cd Batch41
+ls
+git status
+git init (to initialize the empty git repository)
+ls -la or ls -al(will get hidden files/directories)
+cd .git/
+ll
+git status
+git config --global user.name "usha1416"
+git config --global user.email "yusha1416@gmail.com"
+git config --list
+
+
+Git Phases:
+Workspace Area - Untracked files
+Staging/Indexing Area - Changes to be committed - Intermitted Area - Commit logs will save here
+Local Repo
+
+touch file1 file2 file3
+git status
+git add . or * or file names
+git status - Red
+git commit -m "label message" filename
+git status - green
+git log
+git show commitId
+=========================================================
+
+================================================================
+Class2:
+Workspace to Staging - git add filename
+Staging to local repo - git commit -m "label msg" filename
+local repo - staging - git reset --soft CID - vi(Condition Applied, must take latest 2nd commit)
+staging to Workspace - git reset HEAD filename
+We can move modified files from Workspace to local repository
+git reset --mixed CID(Condition Applied, must take latest 2nd commit)
+
+
+touch, cat, VI(view editor)
+====================================
+touch
+----------------
+touch chinnu
+touch chiru
+
+CAT
+----------------
+cat > devops
+hello World
+ls
+cat >> devops1(adding data)
+hello world1
+ls
+
+VI(Edit or Replace) 
+----------------
+vi file
+esc i - insert mode
+...........
+...........
+...........
+esc :w - save
+esc :q - quit
+esc :wq
+esc :wq! - force quit!
+dd - to delete a line
+ndd - delete n number of line (Eg: n=3,4,..)
+yy - to copy a line
+nyy - to copy n number of lines
+p - paste
+u - undo
+dw - delete a word
+x - char delete
+o - below curser line
+O - above curser line
+a -append
+$ - end of the line
+H - HEAD
+G - Ground
+: set nu (set no.of lines)
+: set nonu (remove no. of lines)
+r - replace single character
+R - continuous replacement
+yw - copy word
+nyw - copy n number of words
+/srting - search
+
+============================================
+
+============================================
+Class:3
+git clone https://github.com/usha1416/DevopsPractice-2025.git
+git push https://github.com/usha1416/DevopsPractice-2025.git (repository URL)
+gi https://github.com/usha1416/DevopsPractice-2025.git master
+git pull
+=============================================
+
+=============================================
+Class:4
+git log
+git log --oneline
+git log --oneline -n(number)
+git log -5(recent 5logs)
+git log --author=name(person)
+git log --author=name(person) --oneline
+git log --author=name(person) --oneline -3(number)
+git log --since=yy.mm.dd(middle to end logs)
+git log --until=yy.mm.dd(starting to particular date)
+git log --since=yy.mm.dd -until=yy.mm.dd(in between)
+
+============================
+Removal of files or directories over the repository level
+
+rm -rf directory name or file
+git status
+git add .
+git commit -m "deleting files" directoryname
+git push
+=============================
+
+Branch:
+git branch(branch details will show)
+git branch branchname(master1) - creating a branch
+git checkout branchname - entering into that branch
+git merge branchname - copying data from one branch to another branch
+git push path/of/the/c-repo branch name (creating a new branch in central repo)
+==========================================================
+
+==========================================================
+
+Class:5
+git cherry-pick CID
+local:
+git branch -d branchname(local)
+ERROR: The branch "master1" is not fully merged(local, before deleting you have to merge the branch with other bralocal nch)
+git branch -D branchname(branch force deletion)
+ERROR: cannot delete branch "master2" checkout at '/opt/git1/'
+git checkout -b branchname(creating new branch & entering into that branch)
+git push path/of/the/c-repo branch name
+git push origin branchname
+Central:
+git push origin -d branchname(central deletion of branches) or
+git push path/of/the/c-repo -d branchname
+=================================================================
+
+=================================================================
+
+Class:6
+git stash list
+touch file1
+git add file1
+git status
+git stash save "label name"
+git stash list
+git show stash@{0}
+git stash show -p stash@{0}
+
+How to recover stash memory:
+pop = move the file
+apply = copy the file
+drop = delete
+git stash pop - for latest one
+
+git stash apply stash@{0} - specific
+git stash apply - for latest one
+
+git stash drop stash@{0} - specific
+git stash drop - for latest one
+================================================
+Alias Commands:
+git config --global alias.s "status"
+git s
+git config --global alias.1l "log --oneline"
+git l1
+git config --global alias.b "branch"
+git b
+git config --list
+
+git config --global --unset alias.l1 - remove
+git config --global --unset user.name - remove
+=================================================
+Ignore:
+vi .gitignore - Modified files will not be displayed
+vi .gitignore
+remove file
+save it
+git reset --hard cid - files will be removed permanently
+=================================================================
+
+=================================================================
+
+Class:7
+git commit --amend -m "label message" - change the latest commit label message
+
+Tag:
+git tag
+git tag t1.1 - New tag creation
+git tag
+git log--oneliine or git show tagname
+git tag -d t1.1
+git tag t1.2 cid
+git push origin t1.1
+git push origin --tags(many tags)
+git push origin -d t1.1 t1.2 t1.3
+
+git rebase branchname
+
+git show origin/master
+git merge origin/master
+git pull = git fetch+git merge
+
+git branch -r
+git branch -a
+
+𝟭.𝗴𝗶𝘁 𝗱𝗶𝗳𝗳: shows diff of what is staged and what is modified but unstaged.
+𝟮. 𝗴𝗶𝘁 𝗰𝗼𝗺𝗺𝗶𝘁 -𝗮 -𝗺 "𝗰𝗼𝗺𝗺𝗶𝘁 𝗺𝗲𝘀𝘀𝗮𝗴𝗲": Commit all tracked changes with a message.
+𝟯. 𝗴𝗶𝘁 𝘀𝘁𝗮𝘁𝘂𝘀: view the status of your files in the working directory and staging area.
+𝟰. 𝗴𝗶𝘁 𝗮𝗱𝗱 𝗳𝗶𝗹𝗲_𝗽𝗮𝘁𝗵:Add file(s) to the staging area.
+𝟱. 𝗴𝗶𝘁 𝗰𝗵𝗲𝗰𝗸𝗼𝘂𝘁 -𝗯 𝗯𝗿𝗮𝗻𝗰𝗵_𝗻𝗮𝗺𝗲: Create and switch to a new branch.
+𝟲. 𝗴𝗶𝘁 𝗰𝗵𝗲𝗰𝗸𝗼𝘂𝘁 𝗯𝗿𝗮𝗻𝗰𝗵_𝗻𝗮𝗺𝗲: Switch to an existing branch.
+𝟳. 𝗴𝗶𝘁 𝗰𝗼𝗺𝗺𝗶𝘁 --𝗮𝗺𝗲𝗻𝗱:Modify the last commit.
+𝟴. 𝗴𝗶𝘁 𝗽𝘂𝘀𝗵 𝗼𝗿𝗶𝗴𝗶𝗻 𝗯𝗿𝗮𝗻𝗰𝗵_𝗻𝗮𝗺𝗲: push your new branches and data to a remote repository.
+𝟵. 𝗴𝗶𝘁 𝗽𝘂𝗹𝗹: fetch from a remote repo and try to merge into the current branch.
+𝟭𝟬. 𝗴𝗶𝘁 𝗿𝗲𝗯𝗮𝘀𝗲 -𝗶: Rebase interactively, rewrite commit history.
+𝟭𝟭. 𝗴𝗶𝘁 𝗰𝗹𝗼𝗻𝗲: Create a local copy of a remote repo.
+𝟭𝟮. 𝗴𝗶𝘁 𝗺𝗲𝗿𝗴𝗲: Merge branches together.
+𝟭𝟯. 𝗴𝗶𝘁 𝗹𝗼𝗴 --𝘀𝘁𝗮𝘁: Show commit logs with stats.
+𝟭𝟰. 𝗴𝗶𝘁 𝘀𝘁𝗮𝘀𝗵: Stash changes for later.
+𝟭𝟱. 𝗴𝗶𝘁 𝘀𝘁𝗮𝘀𝗵 𝗽𝗼𝗽: Apply and remove stashed changes.
+𝟭𝟲. 𝗴𝗶𝘁 𝘀𝗵𝗼𝘄 𝗰𝗼𝗺𝗺𝗶𝘁_𝗶𝗱: Show details about a commit.
+𝟭𝟳. 𝗴𝗶𝘁 𝗿𝗲𝘀𝗲𝘁 𝗛𝗘𝗔𝗗~𝟭: Undo the last commit, preserving changes locally.
+𝟭𝟴. 𝗴𝗶𝘁 𝗳𝗼𝗿𝗺𝗮𝘁-𝗽𝗮𝘁𝗰𝗵 -𝟭 𝗰𝗼𝗺𝗺𝗶𝘁_𝗶𝗱: Create a patch file for a specific commit.
+𝟭𝟵. 𝗴𝗶𝘁 𝗮𝗽𝗽𝗹𝘆 𝗽𝗮𝘁𝗰𝗵_𝗳𝗶𝗹𝗲_𝗻𝗮𝗺𝗲: Apply changes from a patch file.
+𝟮𝟬. 𝗴𝗶𝘁 𝗯𝗿𝗮𝗻𝗰𝗵 -𝗗 𝗯𝗿𝗮𝗻𝗰𝗵_𝗻𝗮𝗺𝗲: Delete a branch forcefully.
+𝟮𝟭. 𝗴𝗶𝘁 𝗿𝗲𝘀𝗲𝘁: Undo commits by moving branch reference.
+𝟮𝟮. 𝗴𝗶𝘁 𝗿𝗲𝘃𝗲𝗿𝘁: Undo commits by creating a new commit.
+𝟮𝟯. 𝗴𝗶𝘁 𝗰𝗵𝗲𝗿𝗿𝘆-𝗽𝗶𝗰𝗸 𝗰𝗼𝗺𝗺𝗶𝘁_𝗶𝗱: Apply changes from a specific commit.
+𝟮𝟰. 𝗴𝗶𝘁 𝗯𝗿𝗮𝗻𝗰𝗵: Lists branches.
+𝟮𝟱. 𝗴𝗶𝘁 𝗿𝗲𝘀𝗲𝘁 --𝗵𝗮𝗿𝗱: Resets everything to a previous commit, erasing all uncommitted changes.
