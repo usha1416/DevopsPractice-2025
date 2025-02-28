@@ -1,7 +1,0 @@
- -----
- About ${project.name}
- -----
-
-${project.name} - v${project.version}
- 
- Welcome to the OBSS ${project.name} project!
